@@ -6,20 +6,21 @@
 *{
     margin: 0;
     padding: 0;
-    
 }
-main {
-    background-color: #fff;
+body {
+    background-color: #f3f5f8;
     height: 100vh;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: 'Roboto', 'Montserrat', 'Roboto';
 }
 
-/*Header styles*/
+/* Header styles */
 .hero {
     position: relative;
     height: 100vh;
     min-width: 600px;
+    
     background: url('https://i.pinimg.com/736x/35/f8/95/35f895f2a432a0feb95b42c22a90119a.jpg') no-repeat center center/cover;
     background-color: #fff;
     text-align: center;
@@ -27,10 +28,12 @@ main {
 
 nav ul {
     display: flex;
-    float: right;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0px;
+    width: auto;
+    overflow: hidden;
+    background-color: #fff;
 }
 
 nav ul li {
@@ -57,7 +60,7 @@ nav a:hover{
     max-width: 900px;
     min-width: 600px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.366);
+    background-color: rgba(255, 255, 255, 0.719);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(225, 225, 250, 0.5);
     backdrop-filter: blur(5px);
@@ -69,19 +72,21 @@ nav a:hover{
     box-shadow: 0 4px 30px rgba(225, 225, 250, 3.5);
 }
 
-h1 {
-    font-size: 3rem;
+.hero-content h1 {
+    font-size: 2.5rem;
     margin: 20px;
     color: #14213d;
 }
 
 .hero-content p {
     font-size: 1.5em;
-    margin-bottom: 2rem;
+    font-family: Mulish;
+    margin-bottom: 0.5rem;
     color: #4a4e69;
-    word-wrap: break-word;#14213d
+    word-wrap: break-word;
 }
 
+/*Button styles*/
 .btn {
     width: 9rem;
     font-size: large;
@@ -98,4 +103,110 @@ h1 {
 .btn:hover {
     background: #434364;
     width: 150px;
+}
+
+/* Horizontal Rule Styles*/
+hr {
+    height: 0.1rem;
+    background-color: #eea169;
+    margin-bottom: 5rem;
+}
+hr.hr-2 {
+    height: 0.2rem;
+    margin-bottom: 5rem;
+}
+/* Section "Welcome Info" styles" */
+.welcome-info{
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    min-width: 70rem;
+    max-width: 90rem;
+    align-items: center;
+    background-color: #fca9041a;
+}
+
+.wlc-info {
+    position: relative;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.wlc-info h1 {
+    font-size: 3rem;
+    color: #343a40;
+}
+
+.wlc-info p{
+    margin: 1em;
+    font-size: 1.5rem;
+    font-family: 'mulish' 'arial-sans';
+    text-align: left;
+    color: #403d39;
+}
+
+.wlc-info img {
+    height: 30rem;
+    width: 700px;
+    margin: 0;
+}
+
+.wlc-info-highlight {
+    color: #ff6a00d6;
+    text-decoration-line: underline;
+    text-decoration-color: #030342;
+    letter-spacing: 4px;
+    text-shadow: 0 0 1px #030342;
+}
+
+/* Section 'Feature Highlight" Styles */
+
+.feature-highlight {
+    align-items: center;
+    margin: 0 auto;
+}
+
+.feature-highlight h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #252422;
+    text-decoration: underline;
+    text-decoration-color: #030342;
+}
+
+.feature-highlight p {
+    margin: 6px;
+    color: #495057;
+    text-align: left;
+    font-size: 1.2rem;    
+}
+
+.feature-highlight span{
+    font-size: 1.3rem;
+    color: #9a4000;
+    letter-spacing: 1px;
+    text-decoration: dotted;
+    text-decoration-color: #030342;
+}
+
+.feature-highlight-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.highlight-card {
+    height: 12rem;
+    min-width: 15rem;
+    overflow: hidden;
+    align-items: center; 
+    margin: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+
+.highlight-card img {
+    height: 50px;
+    margin: 2px 2px auto;
 }
