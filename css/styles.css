@@ -2,18 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
-/*General styles*/
-*{
+/* General styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
 body {
     background-color: #f9f9f7;
-    height: 100vh;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
     font-family: 'Roboto', 'Montserrat', 'Roboto';
+    line-height: 1.6; /* Adjust line height for better readability */
 }
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    body {
+        font-size: 16px; /* Decrease font size for better readability on smaller screens */
+    }
+}
+
 
 /* Header styles */
 .hero {
@@ -45,11 +54,10 @@ nav a {
     color: rgb(255, 106, 0);
 }
 
-nav a:hover{
-    color:#434364;  
+nav a:hover {
+    color: #434364;
     font-style: italic;
 }
-
 
 .hero-content {
     position: absolute;
@@ -67,7 +75,7 @@ nav a:hover{
     border: 1px solid rgba(43, 231, 223, 0.3);;
 }
 
-.hero-content:hover :first-child{
+.hero-content:hover :first-child {
     box-shadow: 0 4px 30px rgba(225, 225, 250, 3.5);
 }
 
@@ -85,7 +93,37 @@ nav a:hover{
     word-wrap: break-word;
 }
 
-/*Button styles*/
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .hero {
+        min-width: unset;
+    }
+    
+    nav ul {
+        justify-content: center; /* Center the navigation links */
+    }
+    
+    nav ul li {
+        margin: 1rem; /* Reduce margin between navigation links */
+        font-size: 1.5rem; /* Decrease font size for better fit on smaller screens */
+    }
+    
+    .hero-content {
+        max-width: 90%; /* Adjust max-width for better fit on smaller screens */
+        min-width: unset;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem; /* Decrease font size for better fit on smaller screens */
+    }
+    
+    .hero-content p {
+        font-size: 1rem; /* Decrease font size for better fit on smaller screens */
+    }
+}
+
+
+/* Button styles */
 .btn {
     width: 9rem;
     font-size: large;
@@ -95,7 +133,7 @@ nav a:hover{
     color: #fff;
     text-decoration: none;
     border-radius: 3px;
-    transition background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
     margin: 0.5em;
 }
 
@@ -104,12 +142,26 @@ nav a:hover{
     width: 150px;
 }
 
-/* Horizontal Rule Styles*/
+/* Horizontal Rule Styles */
 hr {
     height: 0.2rem;
     background-color: #eea169;
     margin-bottom: 5em;
 }
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .btn {
+        width: 100%; /* Make buttons full-width on smaller screens */
+        font-size: 1rem; /* Decrease font size for better fit on smaller screens */
+        margin: 0.5em auto; /* Center align buttons */
+    }
+    
+    hr {
+        margin-bottom: 2em; /* Reduce margin bottom for horizontal rule on smaller screens */
+    }
+}
+
 
 /* Section "Welcome Info" styles" */
 .welcome-info{
