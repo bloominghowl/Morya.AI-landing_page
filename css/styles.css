@@ -100,6 +100,7 @@ nav a:hover {
 @media screen and (max-width: 768px) {
     .hero {
         min-width: unset;
+        background-size: cover;
     }
     
     nav ul {
@@ -238,6 +239,7 @@ hr {
 
 .feature-highlight p {
     margin: 0 auto 1.5rem; /* Adjust margin for better spacing */
+    padding: 10px;
     color: #495057;
     font-size: 1.2em;
     text-align: center;
@@ -276,6 +278,10 @@ hr {
     .highlight-card {
         width: calc(100% - 30px); /* Make cards full-width on small screens */
     }
+
+    .feature-highlight p {
+        font-size: 1.2em;
+    }
 }
 
 
@@ -285,6 +291,7 @@ hr {
     justify-content: center;
     align-items: center;
     margin-top: 3em;
+    padding: 1px;
     min-height: 10vh;
     background-color: #fff;
 }
