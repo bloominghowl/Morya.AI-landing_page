@@ -20,6 +20,8 @@ body {
     /* Adjustments for smaller screens */
     body {
         font-size: 16px; /* Decrease font size for better readability on smaller screens */
+        font-family: 'Roboto', 'Montserrat', 'Roboto';
+        line-height: 1.6;
     }
 }
 
@@ -205,6 +207,17 @@ hr {
     text-shadow: 0 0 2px #030342;
 }
 
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .wlc-info h1 {
+        font-size: 2rem; /* Decrease font size for better fit on smaller screens */
+    }
+    
+    .wlc-info p {
+        font-size: 1rem; /* Decrease font size for better fit on smaller screens */
+    }
+}
+
 /* Feature-highlight section styles */
 .feature-highlight {
     align-items: center;
@@ -267,7 +280,6 @@ hr {
 
 
 /* Section "Call-to-action" Styles */
-
 .call-to-action {
     display: flex;
     justify-content: center;
@@ -315,15 +327,15 @@ hr {
 }
 
 /* Responsive adjustments */
-@media screen and (min-width: 577px) and (max-width: 768px) {
-    .call-to-action {
-        flex-direction: column; /* Stack elements vertically on small screens */
-        padding: 2rem; /* Add padding for better spacing */
+@media screen and (max-width: 576px) {
+    .content input[type="email"],
+    .content button {
+        width: calc(100% - 20px); /* Make input and button full-width and consider padding on small screens */
+        max-width: none; /* Remove maximum width on small screens */
     }
 
-    .content input[type="email"] {
-        width: calc(100% - 40px); /* Make input full-width and consider padding on small screens */
-        max-width: none; /* Remove maximum width on small screens */
+    .content button {
+        margin-top: 20px; /* Adjust margin-top for better spacing */
     }
 }
 
@@ -333,8 +345,6 @@ hr {
     align-items: center;
     margin: 0.5em;
     min-height: 25vh;
-    min-width: 60em;
-    justify-content: center;
     background-color: #1d3461da;
 }
 
@@ -346,16 +356,13 @@ hr {
 }
 
 .vision-content {
-    display: block;
-    flex-wrap: wra; /* Allow content to wrap on smaller screens */
-    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center the content */
 }
 
 .vision-paragraph {
     text-align: auto;
     font-size: 1.4em;
-    margin: 1.5em;
-    width: 100%; /* Make paragraph width full-width */
+    margin: 1.5em auto; /* Center the paragraph horizontally */
     max-width: 40em; /* Set maximum width */
     overflow: hidden;
     color: #ffffff;
@@ -364,16 +371,14 @@ hr {
 }
 
 .vision-content form {
-    margin-left: 0; /* Center the form horizontally */
-    display: flex;
-    flex-direction: column; /* Stack form elements vertically */
-    align-items: center; /* Center form elements horizontally */
+    margin: 0 auto; /* Center the form horizontally */
+    display: block; /* Display form items in block format */
+    max-width: 300px; /* Set maximum width */
 }
 
 .vision-content input[type="email"] {
     padding: 10px;
     width: 100%; /* Make input full-width */
-    max-width: 300px; /* Set maximum width */
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -393,21 +398,33 @@ hr {
     background-color: #ff6b4e;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
+/* Responsive adjustments for Our Vision section */
+@media screen and (max-width: 576px) {
     .our-vision {
         min-width: auto; /* Remove minimum width on small screens */
     }
 
     .vision-paragraph {
-        width: calc(100% - 3em); /* Adjust paragraph width for better layout on small screens */
-        margin: 1em 1.5em; /* Adjust margin for better spacing */
+        width: calc(100% - 2em); /* Adjust paragraph width for better layout on small screens */
+        margin: 1em auto; /* Center the paragraph horizontally */
+    }
+
+    .vision-content {
+        text-align: center; /* Center the content */
     }
 
     .vision-content form {
         margin-top: 2em; /* Adjust margin-top for better spacing */
+        max-width: 90%; /* Set maximum width for the form */
+    }
+
+    .vision-content input[type="email"] {
+        width: calc(100% - 20px); /* Make input full-width and consider padding on small screens */
+        max-width: none; /* Remove maximum width on small screens */
     }
 }
+
+
 
 /* Footer styles */
 footer {
