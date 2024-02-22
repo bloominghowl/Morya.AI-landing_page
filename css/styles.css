@@ -343,9 +343,7 @@ hr {
     }
 }
 
-
-
-/* Our-Vision Styles*/
+/* Our-Vision Styles */
 .our-vision {
     position: relative;
     margin: 1em;
@@ -360,33 +358,37 @@ hr {
     font-size: 2em;
     color: #fff;
 }
+
 .vision-content {
     display: flex;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    justify-content: center; /* Center content horizontally */
 }
 
 .vision-paragraph {
     text-align: auto;
     font-size: 1.4em;
     margin: 1.5em;
-    height: 10em;
-    width: 35em;
-    min-height: 10em;
-    min-width: 35em;
+    width: 100%; /* Make paragraph width full-width */
+    max-width: 40em; /* Set maximum width */
     overflow: hidden;
-    color: #ffffff; 
+    color: #ffffff;
     border-color: #bf827379;
     border-style: dashed;
 }
 
 .vision-content form {
-    margin-top: 10em;
-    margin-left: 5em;
-    align-items: center;
+    margin-top: 2em; /* Adjust margin-top for better spacing */
+    margin-left: 0; /* Center the form horizontally */
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center form elements horizontally */
 }
 
 .vision-content input[type="email"] {
     padding: 10px;
-    width: 300px;
+    width: 100%; /* Make input full-width */
+    max-width: 300px; /* Set maximum width */
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -398,10 +400,27 @@ hr {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 1em; /* Add margin to the top for better spacing */
 }
 
 .vision-content button:hover {
     background-color: #ff6b4e;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .our-vision {
+        min-width: auto; /* Remove minimum width on small screens */
+    }
+
+    .vision-paragraph {
+        width: calc(100% - 3em); /* Adjust paragraph width for better layout on small screens */
+        margin: 1em 1.5em; /* Adjust margin for better spacing */
+    }
+
+    .vision-content form {
+        margin-top: 2em; /* Adjust margin-top for better spacing */
+    }
 }
 
 /* FOOTER */
