@@ -162,22 +162,20 @@ hr {
     }
 }
 
-
-/* Section "Welcome Info" styles" */
-.welcome-info{
+/* Section "Welcome Info" styles */
+.welcome-info {
     position: relative;
     display: flex;
+    flex-direction: column; /* Stack elements vertically on smaller screens */
     margin: 0 auto;
-    min-width: 70rem;
-    max-width: 90rem;
-    align-items: center;
+    padding: 2rem; /* Add padding for better spacing */
     background-color: #1d3461da;
+    text-align: center; /* Center-align content */
 }
 
 .wlc-info {
     position: relative;
     margin-top: 1rem;
-    text-align: center;
 }
 
 .wlc-info h1 {
@@ -185,18 +183,17 @@ hr {
     color: #fff;
 }
 
-.wlc-info p{
-    margin: 1em;
+.wlc-info p {
+    margin: 1em auto;
     font-size: 1.3rem;
-    font-family: 'mulish' 'arial-sans';
-    text-align: left;
+    font-family: 'mulish', 'arial-sans';
     color: #fff;
 }
 
 .wlc-info img {
-    height: 30rem;
-    width: 700px;
-    margin: 0;
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 1rem auto; /* Add margin for better spacing */
 }
 
 .wlc-info-highlight {
@@ -207,15 +204,25 @@ hr {
     text-shadow: 0 0 2px #030342;
 }
 
-/* Section 'Feature Highlight" Styles */
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .wlc-info h1 {
+        font-size: 2rem; /* Decrease font size for better fit on smaller screens */
+    }
+    
+    .wlc-info p {
+        font-size: 1rem; /* Decrease font size for better fit on smaller screens */
+    }
+}
 
+/* .feature-highlight styles */
 .feature-highlight {
     align-items: center;
+    justify-content: center; /* Center items horizontally on all screens */
     margin: 0 auto;
 }
 
 .feature-highlight h2 {
-    
     text-align: center;
     font-size: 2rem;
     color: #252422;
@@ -224,33 +231,32 @@ hr {
 }
 
 .feature-highlight p {
-    margin-left: 3rem;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0;
     color: #495057;
-    text-align: left;
-    font-size: 1.2em;    
+    text-align: center; /* Center-align text on all screens */
+    font-size: 1.2em;
 }
 
-.feature-highlight span{
+.feature-highlight span {
     font-size: 1.3em;
     color: #1d3461f7;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     text-decoration: dotted;
     text-decoration-color: #030342;
 }
 
 .feature-highlight-card {
-    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center items horizontally on all screens */
     margin: 1rem;
+    
 }
 
 .highlight-card {
     height: 12rem;
     min-width: 15rem;
     overflow: hidden;
-    align-items: center; 
+    align-items: center;
     margin: 15px;
     border-radius: 15px;
     background-color: #fff;
@@ -258,10 +264,23 @@ hr {
 
 .highlight-card img {
     margin-top: 1.5em;
-    margin-left: 1em;
+    margin-left: 1.5em;
     position: absolute;
     height: 25px;
 }
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .feature-highlight-card {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally on small screens */
+    }
+
+    .highlight-card {
+        width: calc(100% - 30px); /* Make cards full-width on small screens */
+    }
+}
+
 
 /* Section "Call-to-action" Styles*/
 
