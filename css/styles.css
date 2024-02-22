@@ -282,7 +282,7 @@ hr {
 }
 
 
-/* Section "Call-to-action" Styles*/
+/* Section "Call-to-action" Styles */
 
 .call-to-action {
     display: flex;
@@ -290,7 +290,6 @@ hr {
     align-items: center;
     margin-top: 3em;
     min-height: 10vh;
-    min-width: 50rem;
     background-color: #fff;
 }
 
@@ -324,11 +323,27 @@ hr {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px; /* Add margin to the top */
 }
 
 .content button:hover {
     background-color: #ff6b4e;
 }
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .call-to-action {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        padding: 2rem; /* Add padding for better spacing */
+    }
+
+    .content input[type="email"] {
+        width: calc(100% - 40px); /* Make input full-width and consider padding on small screens */
+        max-width: none; /* Remove maximum width on small screens */
+    }
+}
+
+
 
 /* Our-Vision Styles*/
 .our-vision {
