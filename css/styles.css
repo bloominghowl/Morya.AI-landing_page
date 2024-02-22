@@ -16,7 +16,7 @@ body {
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 577px) and (max-width: 768px) {
     /* Adjustments for smaller screens */
     body {
         font-size: 16px; /* Decrease font size for better readability on smaller screens */
@@ -32,6 +32,7 @@ body {
     background: url('https://i.pinimg.com/736x/35/f8/95/35f895f2a432a0feb95b42c22a90119a.jpg') no-repeat center center/cover;
     background-color: #fff;
     text-align: center;
+    background-size: cover;
 }
 
 nav ul {
@@ -204,22 +205,13 @@ hr {
     text-shadow: 0 0 2px #030342;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    .wlc-info h1 {
-        font-size: 2rem; /* Decrease font size for better fit on smaller screens */
-    }
-    
-    .wlc-info p {
-        font-size: 1rem; /* Decrease font size for better fit on smaller screens */
-    }
-}
-
-/* .feature-highlight styles */
+/* Feature-highlight section styles */
 .feature-highlight {
     align-items: center;
-    justify-content: center; /* Center items horizontally on all screens */
     margin: 0 auto;
+    padding: 2rem 0; /* Adjust padding for better spacing */
+    display: flex;
+    flex-direction: column; /* Stack cards vertically on smaller screens */
 }
 
 .feature-highlight h2 {
@@ -228,46 +220,38 @@ hr {
     color: #252422;
     text-decoration: underline;
     text-decoration-color: #030342;
+    margin-bottom: 1rem; /* Adjust margin for better spacing */
 }
 
 .feature-highlight p {
-    margin: 1.5rem 0;
+    margin: 0 auto 1.5rem; /* Adjust margin for better spacing */
     color: #495057;
-    text-align: center; /* Center-align text on all screens */
     font-size: 1.2em;
+    text-align: center;
 }
 
 .feature-highlight span {
     font-size: 1.3em;
     color: #1d3461f7;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     text-decoration: dotted;
     text-decoration-color: #030342;
 }
 
-.feature-highlight-card {
-    display: flex;
-    justify-content: center; /* Center items horizontally on all screens */
-    margin: 1rem;
-    
-}
-
 .highlight-card {
-    height: 12rem;
-    min-width: 15rem;
-    overflow: hidden;
-    align-items: center;
-    margin: 15px;
+    margin: 0 auto 1rem; /* Adjust margin for better spacing */
     border-radius: 15px;
     background-color: #fff;
+    width: 90%; /* Adjust width for better layout on smaller screens */
+    max-width: 600px; /* Set maximum width */
 }
 
 .highlight-card img {
-    margin-top: 1.5em;
-    margin-left: 1.5em;
-    position: absolute;
-    height: 25px;
+    width: 10%; /* Make images fill the card container */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
+
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
@@ -331,7 +315,7 @@ hr {
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 577px) and (max-width: 768px) {
     .call-to-action {
         flex-direction: column; /* Stack elements vertically on small screens */
         padding: 2rem; /* Add padding for better spacing */
@@ -346,7 +330,8 @@ hr {
 /* Our-Vision Styles */
 .our-vision {
     position: relative;
-    margin: 1em;
+    align-items: center;
+    margin: 0.5em;
     min-height: 25vh;
     min-width: 60em;
     justify-content: center;
@@ -354,14 +339,15 @@ hr {
 }
 
 .our-vision h2 {
+    padding-top: 1em;
     text-align: center;
     font-size: 2em;
     color: #fff;
 }
 
 .vision-content {
-    display: flex;
-    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    display: block;
+    flex-wrap: wra; /* Allow content to wrap on smaller screens */
     justify-content: center; /* Center content horizontally */
 }
 
@@ -373,12 +359,11 @@ hr {
     max-width: 40em; /* Set maximum width */
     overflow: hidden;
     color: #ffffff;
-    border-color: #bf827379;
+    border-color: #bf8273d3;
     border-style: dashed;
 }
 
 .vision-content form {
-    margin-top: 2em; /* Adjust margin-top for better spacing */
     margin-left: 0; /* Center the form horizontally */
     display: flex;
     flex-direction: column; /* Stack form elements vertically */
@@ -401,6 +386,7 @@ hr {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 1em; /* Add margin to the top for better spacing */
+    margin-bottom: 1.5em; /* Add margin to the bottom for better spacing */
 }
 
 .vision-content button:hover {
@@ -423,32 +409,27 @@ hr {
     }
 }
 
-/* FOOTER */
-
+/* Footer styles */
 footer {
-    font-size: 1.3em;
-    height: 5em;
-    max-height: 5em;
-    margin: 0;
-    background-color: #1d3461da;
-}
-
-footer p {
-    margin: 0 auto;
-    padding-top: 2em;
+    background-color: #1d3461;
     color: #fff;
+    padding: 3rem 0; /* Add padding to top and bottom for spacing */
     text-align: center;
 }
 
+footer p {
+    padding-bottom: 2px; /* Add bottom padding to paragraph */
+    font-size: 1.2em;
+}
+
 footer a {
-    color: #ff7e5f;
+    color: #ff6b4e;
+    text-decoration: none;
 }
 
-footer a:hover {
-    cursor: pointer;
-    color: #f0f0d2;
-}
-
-footer a:active {
-    color: #f0f0d2;
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 2em 0; /* Adjust padding for smaller screens */
+    }
 }
